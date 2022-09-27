@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import CustomLink from '~/pages/components/atom/CustomLink';
+import CustomLink from '~/components/atom/CustomLink';
 
 function NavBar() {
   return (
