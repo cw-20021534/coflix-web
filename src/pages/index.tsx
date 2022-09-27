@@ -1,7 +1,13 @@
 import Head from 'next/head';
 import React from 'react';
-import Layout from '~/pages/components/molecules/Layout';
+import CardList from '~/components/molecules/CardList';
+import Layout from '~/components/molecules/Layout';
 import type { CustomNextPage } from '~/types';
+
+const dummyData = { title: 'test', imageUrl: 'https://t1.daumcdn.net/movie/0ec2fad5125dabb0400e455604dfdacd2df2b650' };
+const fillDummyData = Array(15)
+  .fill('')
+  .map((v, i) => ({ ...dummyData, id: i + 1 }));
 
 const Home: CustomNextPage = () => {
   return (
@@ -13,6 +19,9 @@ const Home: CustomNextPage = () => {
       </Head>
 
       <main>hi</main>
+
+      <CardList title="가로" size="small" videos={fillDummyData} />
+      <CardList title="세로" size="medium" videos={fillDummyData} />
     </div>
   );
 };

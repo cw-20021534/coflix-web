@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from '~/pages/components/molecules/NavBar';
+import NavBar from '~/components/molecules/NavBar';
 
 interface Props {
   children: React.ReactNode;
